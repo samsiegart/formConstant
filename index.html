@@ -4,21 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Canvas Experiment</title>
+  <style>
+    #content {
+      text-align: center;
+    }
+    #canvas {
+      margin: auto;
+    }
+  </style>
 </head>
 <body>
-  <h1>Form Constant Canvas Experiment</h1>
-  <canvas id="canvas"></canvas>
-  <div>
-    <input id="drawbtn" value="Draw" type="button">
-    <input id="animatebtn" value="Animate" type="button">
-    <input id="clearbtn" value="Clear" type="button">
-    <input id="logpolarbtn" value="Log Polar" type="button">
-    <p>Inspired by <a href="http://intothecontinuum.tumblr.com/post/19754693526/visual-hallucinations-and-form-constants">this</a> blogpost.</p>
+  <div id="content">
+    <h1>Form Constant Canvas Experiment</h1>
+    <canvas id="canvas"></canvas>
+    <div id="buttons">
+      <input id="drawbtn" value="Draw" type="button">
+      <input id="animatebtn" value="Animate" type="button">
+      <input id="clearbtn" value="Clear" type="button">
+      <input id="logpolarbtn" value="Log Polar" type="button">
+      <p>Inspired by <a href="http://intothecontinuum.tumblr.com/post/19754693526/visual-hallucinations-and-form-constants">this</a> blogpost.</p>
+    </div>
   </div>
   <script>
     function painter(canvas) {
-      canvas.height = 500;
-      canvas.width = 800;
+      canvas.height = Math.min(500, window.innerHeight-200);
+      canvas.width = Math.min(700, window.innerWidth*0.95);
       this.canvas = canvas;
       this.ctx = canvas.getContext('2d');
       this.graphUtil = new graphUtility();
