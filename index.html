@@ -27,7 +27,7 @@
   </div>
   <script>
     function painter(canvas) {
-      canvas.height = Math.min(500, window.innerHeight-200);
+      canvas.height = Math.min(500, window.innerHeight-(200 + window.innerHeight % 20));
       canvas.width = Math.min(700, window.innerWidth*0.95);
       this.canvas = canvas;
       this.ctx = canvas.getContext('2d');
