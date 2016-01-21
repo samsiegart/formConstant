@@ -150,10 +150,7 @@
     };
 
     painter.prototype.setLogPolar = function() {
-      if(this.clearing) return;
-      this.clearing = true;
       this.isLogPolar = !this.isLogPolar;
-      this.drawStripes();
     }
 
     painter.prototype.logPolar = function(data) {
