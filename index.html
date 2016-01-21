@@ -90,10 +90,10 @@
           return;
         }
         setTimeout(function() {
-          var blackStripe = this.y >= 30 ? true : false;
-          var stripePixelCount = (this.y % 30)*canvas.width;
-          for(var i = 0; i <= (60-this.y)*canvas.width; i += 4){
-            if(stripePixelCount >= 30*canvas.width){
+          var blackStripe = this.y >= 10 ? true : false;
+          var stripePixelCount = (this.y % 10)*canvas.width;
+          for(var i = 0; i <= (20-this.y)*canvas.width; i += 4){
+            if(stripePixelCount >= 10*canvas.width){
               blackStripe = !blackStripe;
               stripePixelCount = 0;
             }
@@ -103,7 +103,7 @@
             d[i+3] = 255;
           }
           for(var i = 0; i <= d.length; i += 4){
-            if(stripePixelCount >= 30*canvas.width){
+            if(stripePixelCount >= 10*canvas.width){
               blackStripe = !blackStripe;
               stripePixelCount = 0;
             }
@@ -128,7 +128,7 @@
           }
         }.bind(self), 10);
         this.y += 1;
-        if(this.y >= 60){
+        if(this.y >= 20){
            this.y = 0;
         }
       };
