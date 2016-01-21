@@ -72,9 +72,9 @@
     };
 
     painter.prototype.animate = function() {
+      this.animating = !this.animating;
       if(this.clearing) return;
       this.clearing = true;
-      this.animating = !this.animating;
       this.drawStripes();
     };
 
