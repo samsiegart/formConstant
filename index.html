@@ -151,6 +151,11 @@
 
     painter.prototype.setLogPolar = function() {
       this.isLogPolar = !this.isLogPolar;
+      if(!this.animating){
+        if(this.clearing) return;
+        this.clearing = true;
+        this.drawStripes();
+      }
     }
 
     painter.prototype.logPolar = function(data) {
