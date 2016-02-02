@@ -28,7 +28,7 @@
     "url": "https://github.com/samsiegart/formConstant/issues"
   },
   "homepage": "https://github.com/samsiegart/formConstant#readme",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-jshint": "^2.0.0",
@@ -37,5 +37,8 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.1",
     "jshint-stylish": "^2.1.0"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }

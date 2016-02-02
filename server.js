@@ -9,6 +9,7 @@ app.use(function(req, res, next) {
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(3000, function() {
-  console.log('App listening on port 3000!');
+port = process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log('App listening on port', port);
 });
