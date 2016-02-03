@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
 app.use(function(req, res, next) {
@@ -7,6 +8,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+process.env.PWD = process.cwd();
 app.use(express.static(path.join(process.env.PWD, 'public')));
 
 port = process.env.PORT || 3000;

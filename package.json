@@ -2,6 +2,9 @@
   "name": "form-constant",
   "version": "1.0.0",
   "description": "form constant experiments",
+  "engines": {
+    "node": "5.0.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
