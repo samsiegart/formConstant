@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Constant Experiment</title>
-  <style>
-    #content {
-      text-align: center;
-    }
-    #canvas {
-      margin: auto;
-    }
-  </style>
-</head>
-<body>
-  <div id="content">
-    <h1>Form Constant Canvas Experiment</h1>
-    <canvas id="canvas"></canvas>
-    <div id="buttons">
-      <input id="drawbtn" value="Draw" type="button">
-      <input id="clearbtn" value="Clear" type="button">
-      <input id="logpolarbtn" value="Log Polar" type="button">
-      <p><a id="download">Download as image</a><p>
-      <p>Inspired by <a href="http://intothecontinuum.tumblr.com/post/19754693526/visual-hallucinations-and-form-constants">this</a> blogpost.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Constant Experiment</title>
+    <style>
+      #content {
+        text-align: center;
+      }
+      #canvas {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Form Constant Canvas Experiment</h1>
+      <canvas id="canvas"></canvas>
+      <div id="buttons">
+        <input id="drawbtn" value="Draw" type="button" />
+        <input id="clearbtn" value="Clear" type="button" />
+        <input id="logpolarbtn" value="Log Polar" type="button" />
+        <select id="select">
+          <option value="1">Diamonds</option>
+          <option value="2">Waves</option>
+          <option value="3">Isometric</option>
+          <option value="4">Colorful</option>
+        </select>
+        <p><a id="download" style="cursor: pointer">Download as image</a></p>
+        <p></p>
+        <p>
+          Inspired by
+          <a
+            href="http://intothecontinuum.tumblr.com/post/19754693526/visual-hallucinations-and-form-constants"
+            >this</a
+          >
+          blogpost.
+        </p>
+      </div>
     </div>
-  </div>
-  <script src="javascript/bundle.js"></script>
-</body>
+    <script src="javascript/script.js"></script>
+  </body>
 </html>
